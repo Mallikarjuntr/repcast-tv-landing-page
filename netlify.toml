@@ -25,3 +25,11 @@
   from = "/terms"
   to = "/terms.html"
   status = 200
+
+# Short link the TV's QR code opens: /go?code=1234 → the phone camera page (GitHub Pages).
+# 302, not 301, so phones don't cache it if the camera page moves. Netlify keeps the query string.
+[[redirects]]
+  from = "/go"
+  to = "https://mallikarjuntr.github.io/spotter-tv-app/"
+  status = 302
+  force = true
