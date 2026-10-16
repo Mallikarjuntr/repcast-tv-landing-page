@@ -85,13 +85,8 @@
   status = 200
 
 # The phone camera page, served from this address but built and published by spotter-tv-app
-# (GitHub Pages). It loads its files by relative paths, so it needs the trailing slash.
-[[redirects]]
-  from = "/camera"
-  to = "/camera/"
-  status = 301
-  force = true
-
+# (GitHub Pages). It loads its files by relative paths, so link to it with the trailing slash.
+# (No /camera → /camera/ redirect: Netlify matches both as the same path, so it would loop.)
 [[redirects]]
   from = "/camera/*"
   to = "https://mallikarjuntr.github.io/spotter-tv-app/:splat"
