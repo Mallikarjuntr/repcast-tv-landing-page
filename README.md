@@ -13,4 +13,4 @@ npx --yes serve .
 - `terms.html` (also `/terms`) — terms of use
 - `assets/site.css` — the "Studio" look shared with the TV app
 - `assets/fonts/` — Archivo and Archivo Narrow, self-hosted (SIL Open Font License, see `OFL.txt`)
-- `netlify.toml` — publish settings, security headers, and the `/go` short link the TV's QR code opens (`/go?code=1234` → the phone camera page on GitHub Pages)
+- `netlify.toml` — publish settings and security headers; `/camera/` serves the phone camera page (built and published by spotter-tv-app on GitHub Pages, proxied here), and `/go?code=…`, which the TV's QR code opens, forwards to it

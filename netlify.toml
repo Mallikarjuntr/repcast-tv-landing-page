@@ -2,8 +2,58 @@
 [build]
   publish = "."
 
+# The site's own pages get a strict policy: no scripts, no camera. It is listed path by path
+# because Netlify combines every matching rule, and /camera/ must not inherit it.
 [[headers]]
-  for = "/*"
+  for = "/"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'none'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'none'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/privacy"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'none'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/privacy.html"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'none'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/terms"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'none'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/terms.html"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'none'; frame-ancestors 'none'; base-uri 'self'"
+
+[[headers]]
+  for = "/assets/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -14,6 +64,14 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# The phone camera page needs scripts, WebAssembly, the camera, the model download and the
+# backend's sockets; it sets none of these limits on GitHub Pages either.
+[[headers]]
+  for = "/camera/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
 # Friendly paths for the store listing and the app.
 [[redirects]]
@@ -26,8 +84,22 @@
   to = "/terms.html"
   status = 200
 
-# Short link the TV's QR code opens: /go?code=1234 → the phone camera page (GitHub Pages).
-# 302, not 301, so phones don't cache it if the camera page moves. Netlify keeps the query string.
+# The phone camera page, served from this address but built and published by spotter-tv-app
+# (GitHub Pages). It loads its files by relative paths, so it needs the trailing slash.
+[[redirects]]
+  from = "/camera"
+  to = "/camera/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/camera/*"
+  to = "https://mallikarjuntr.github.io/spotter-tv-app/:splat"
+  status = 200
+  force = true
+
+# Short link the TV's QR code opens: /go?code=123456 → the camera page. 302, not 301, so phones
+# don't cache it if the camera page moves. Netlify keeps the query string.
 [[redirects]]
   from = "/go"
   to = "https://mallikarjuntr.github.io/spotter-tv-app/"
