@@ -109,3 +109,8 @@ figcaption { color: var(--muted); font-size: 15px; margin-top: 10px; }
 .foot a { color: var(--soft); text-decoration: none; }
 .foot a:hover { color: var(--text); }
 .foot nav { display: flex; gap: 18px; flex-wrap: wrap; }
+
+/* "What you need" under the hero headline. */
+.needs { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.needs li { background: var(--surface); border-radius: 12px; padding: 10px 14px; font-size: 15px; color: var(--soft); }
+.needs strong { color: var(--text); font-weight: 600; }
