@@ -97,6 +97,6 @@
 # don't cache it if the camera page moves. Netlify keeps the query string.
 [[redirects]]
   from = "/go"
-  to = "https://mallikarjuntr.github.io/spotter-tv-app/"
+  to = "/camera/"
   status = 302
   force = true
