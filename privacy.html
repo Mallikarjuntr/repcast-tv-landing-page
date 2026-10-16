@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy — Spotter</title>
+  <meta name="description" content="How Spotter handles your camera, your workouts and your data.">
+  <meta name="theme-color" content="#15120F">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="wrap top">
+    <a class="wordmark" href="/">spotter<span>.</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#setup">Set up your phone</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <article class="legal">
+      <p class="kicker">Privacy policy</p>
+      <h1>Your data, plainly</h1>
+      <p class="updated">Last updated: 16 October 2026</p>
+
+      <div class="summary">
+        <p><strong>In short:</strong></p>
+        <ul>
+          <li>Your camera picture goes only from your phone to your TV, over your home network. It never reaches our servers, and we never record it.</li>
+          <li>Body tracking runs on your phone. To the TV it sends your rep results and the positions of a few body points, not pictures.</li>
+          <li>There is no account. Profiles, history and swaps are kept on your TV.</li>
+          <li>To link your phone to your TV, our servers keep a short pairing code for two hours.</li>
+        </ul>
+      </div>
+
+      <h2>Who we are</h2>
+      <p>Spotter is a fitness app for Amazon Fire TV with a companion camera page that opens in your phone's browser. It was built for the Amazon Developer Hackathon 2026, and its source code is public on <a href="https://github.com/Mallikarjuntr/spotter-tv-app">GitHub</a>. In this policy, "Spotter", "we" and "us" mean the people who make it.</p>
+
+      <h2>The camera on your phone</h2>
+      <p>When you use Smart coaching, the camera page on your phone uses your camera to see how you move. Body tracking (Google's MediaPipe Pose) runs inside your phone's browser.</p>
+      <ul>
+        <li><strong>The live picture</strong> is sent directly from your phone to your Fire TV over your local network, encrypted, using WebRTC. It does not pass through or get stored on our servers. To set up that direct link, your phone and TV contact a public STUN server run by Google, which sees their network addresses but not your picture. There is no relay: if your phone and TV can't connect directly, no picture is sent.</li>
+        <li><strong>Body points</strong>: the positions of 13 body points (such as shoulders, hips, knees and ankles) are sent to your TV so it can draw your skeleton. They go over the same direct link, or through our live messaging service (below) when the direct link isn't available.</li>
+        <li><strong>Rep results</strong>: for each rep, the phone sends the TV whether it counted, how deep it was, and any form notes (for example "knees drifted in").</li>
+        <li>We do not record video, take photos, or use your camera for anything other than the workout you started.</li>
+      </ul>
+
+      <h2>What goes through our servers</h2>
+      <p>Spotter's servers run on Amazon Web Services (AWS) in the Mumbai region (ap-south-1).</p>
+      <ul>
+        <li><strong>Pairing.</strong> When you start a coached session, the TV asks for a pairing code. We store the code, a random channel name and the time it was made. The record is deleted automatically after two hours.</li>
+        <li><strong>Live messages.</strong> Your phone and TV exchange messages through AWS AppSync Events on that random channel: rep results, framing hints (for example "step back"), body points when the direct link isn't available, and the set-up messages for the direct video link. These messages are passed on as they arrive and are not stored by us.</li>
+        <li><strong>Server logs.</strong> Our pairing service keeps error logs for seven days to help us fix problems. We do not use them to identify you.</li>
+      </ul>
+      <p>We do not sell your data, share it with advertisers, or use it to build a profile of you.</p>
+
+      <h2>What stays on your TV</h2>
+      <p>The names you add under "Who's training?", each person's workout history (date, reps, minutes and clean-form percentage), streaks and swapped moves are stored only on your Fire TV. They are not sent to us. To delete them, clear Spotter's data in your Fire TV settings or uninstall the app.</p>
+
+      <h2>Voice</h2>
+      <p>The coach's voice is pre-recorded and plays on your TV. Spotter does not use a microphone.</p>
+
+      <h2>The AI coach's note</h2>
+      <p>If the AI coach's note is turned on in a future version, a short summary of your workout (for example the number of reps, which ones counted, and the form notes) will be sent to Amazon Bedrock to write the note after your session. No pictures or body points are included. This page will be updated before that happens.</p>
+
+      <h2>Other services</h2>
+      <ul>
+        <li>The phone camera page is hosted on GitHub Pages, and this website on Netlify. Like any website, they receive your network address and basic browser details when you visit.</li>
+        <li>The camera page downloads the body-tracking model from Google's servers (storage.googleapis.com) and its fonts from Google Fonts. This website uses its own copy of the fonts.</li>
+        <li>Purchases, if offered, are handled by Amazon through the Amazon Appstore. We do not see your payment details.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>Spotter is meant for adults and teenagers training with a household. It is not directed at children under 13, and we do not knowingly collect their personal information.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>You can use Follow along without any camera.</li>
+        <li>You can stop the camera at any time by closing the page on your phone.</li>
+        <li>You can delete everything stored on your TV by clearing Spotter's data or uninstalling it.</li>
+      </ul>
+
+      <h2>Changes and contact</h2>
+      <p>If we change how Spotter handles data, we will update this page and the date at the top. Questions? Open an issue on <a href="https://github.com/Mallikarjuntr/spotter-tv-app/issues">GitHub</a>.</p>
+    </article>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 Spotter</span>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="terms.html">Terms</a>
+        <a href="https://github.com/Mallikarjuntr/spotter-tv-app">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
