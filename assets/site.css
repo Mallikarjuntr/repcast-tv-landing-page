@@ -1,8 +1,8 @@
-/* Spotter "Studio" look, matching the Fire TV app (apps/tv/src/theme.ts in spotter-tv-app). */
-@font-face { font-family: 'Archivo'; src: url('fonts/Archivo_400Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
-@font-face { font-family: 'Archivo'; src: url('fonts/Archivo_600SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
-@font-face { font-family: 'Archivo'; src: url('fonts/Archivo_800ExtraBold.ttf') format('truetype'); font-weight: 800; font-display: swap; }
-@font-face { font-family: 'Archivo Narrow'; src: url('fonts/ArchivoNarrow_700Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+/* Spotter "Studio" look, matching the Fire TV app (apps/tv/src/theme.ts in spotter-tv-app): Barlow type. */
+@font-face { font-family: 'Barlow'; src: url('fonts/Barlow_400Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('fonts/Barlow_600SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('fonts/Barlow_800ExtraBold.ttf') format('truetype'); font-weight: 800; font-display: swap; }
+@font-face { font-family: 'Barlow Semi Condensed'; src: url('fonts/BarlowSemiCondensed_800ExtraBold.ttf') format('truetype'); font-weight: 800; font-display: swap; }
 
 :root {
   --bg: #15120f;
@@ -25,7 +25,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 400 18px/1.6 'Archivo', system-ui, sans-serif;
+  font: 400 18px/1.6 'Barlow', system-ui, sans-serif;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--accent); }
@@ -45,7 +45,7 @@ a:hover { color: #ff9a68; }
 
 /* Type */
 .kicker { font-weight: 800; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
-h1, h2, h3 { font-family: 'Archivo Narrow', 'Archivo', sans-serif; font-weight: 700; text-transform: uppercase; line-height: 0.95; margin: 0; }
+h1, h2, h3 { font-family: 'Barlow Semi Condensed', 'Barlow', sans-serif; font-weight: 800; letter-spacing: -0.01em; line-height: 1; margin: 0; }
 h1 { font-size: clamp(46px, 7.4vw, 92px); letter-spacing: -0.5px; }
 .nowrap { white-space: nowrap; }
 h2 { font-size: clamp(36px, 5.5vw, 56px); }
@@ -79,7 +79,7 @@ section { padding: 64px 0; border-top: 1px solid var(--line); }
 .card li { margin: 4px 0; }
 .card .tag { font-weight: 800; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 .card.highlight .tag { color: var(--accent); }
-.step-num { font-family: 'Archivo Narrow', sans-serif; font-weight: 700; font-size: 56px; line-height: 1; color: var(--accent); }
+.step-num { font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 800; font-size: 56px; line-height: 1; color: var(--accent); }
 .figure-row { display: grid; gap: 18px; margin-top: 32px; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .figure-row { grid-template-columns: 1fr 1fr; } }
 figure { margin: 0; }
