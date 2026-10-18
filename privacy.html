@@ -24,7 +24,7 @@
     <article class="legal">
       <p class="kicker">Privacy policy</p>
       <h1>Your data, plainly</h1>
-      <p class="updated">Last updated: 18 October 2026</p>
+      <p class="updated">Last updated: 18 October 2026 (Analyse with AI)</p>
 
       <div class="summary">
         <p><strong>In short:</strong></p>
@@ -33,6 +33,7 @@
           <li>Body tracking runs on your phone. To the TV it sends your rep results and the positions of a few body points, not pictures.</li>
           <li>There is no account. Profiles and history are kept on your TV.</li>
           <li>To link your phone to your TV, our servers keep a short pairing code for two hours.</li>
+          <li>Only if you press <strong>Analyse with AI</strong>: that workout's numbers (no video or pictures) are sent to Claude on Amazon Bedrock to write a report.</li>
         </ul>
       </div>
 
@@ -63,8 +64,15 @@
       <h2>Voice</h2>
       <p>The coach's voice is pre-recorded and plays on your TV. Spotter does not use a microphone.</p>
 
-      <h2>The AI coach's note</h2>
-      <p>If the AI coach's note is turned on in a future version, a short summary of your workout (for example the number of reps, which ones counted, and the form notes) will be sent to Amazon Bedrock to write the note after your session. No pictures or body points are included. This page will be updated before that happens.</p>
+      <h2>Analyse with AI</h2>
+      <p>After a camera workout, the results screen has an <strong>Analyse with AI</strong> button. Nothing is sent unless you press it. When you do:</p>
+      <ul>
+        <li><strong>What is sent:</strong> the exercise, the planned sets and reps, and for each attempt whether it counted, how deep it went (an angle in degrees), how long it took and its form note; plus, for earlier sessions of the same exercise on this TV, how many days ago, the reps, the clean reps and the time. Also the session's pairing code and channel, so our server can check the request comes from a workout in progress.</li>
+        <li><strong>What is never sent:</strong> video, pictures, body points, names or profile details.</li>
+        <li><strong>Where it goes:</strong> our server (AWS, Mumbai) passes the numbers to Claude, an AI model made by Anthropic, running on Amazon Bedrock in the AWS US East (N. Virginia) region, which writes the report. Amazon Bedrock processes the request under AWS's terms; AWS states that Bedrock does not use your prompts or results to train models.</li>
+        <li><strong>What is kept:</strong> we don't store the numbers or the report. The report is shown on your TV and forgotten when you close the app. Our server keeps an error log for seven days, and counts how many reports each pairing session has asked for (at most ten), deleted with the session after two hours.</li>
+        <li>The report is written by AI from numbers only. It can be wrong and is not medical advice.</li>
+      </ul>
 
       <h2>Other services</h2>
       <ul>
