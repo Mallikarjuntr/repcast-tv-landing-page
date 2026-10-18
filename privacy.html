@@ -33,7 +33,7 @@
           <li>Body tracking runs on your phone. To the TV it sends your rep results and the positions of a few body points, not pictures.</li>
           <li>There is no account. Profiles and history are kept on your TV.</li>
           <li>To link your phone to your TV, our servers keep a short pairing code for two hours.</li>
-          <li>Only if you press <strong>Analyse with AI</strong>: that workout's numbers (no video or pictures) are sent to Claude on Amazon Bedrock to write a report.</li>
+          <li>Only if you press <strong>Analyse with AI</strong>: that workout's numbers (no video or pictures) are sent to an AI model on Amazon Bedrock to write a report.</li>
         </ul>
       </div>
 
@@ -69,7 +69,7 @@
       <ul>
         <li><strong>What is sent:</strong> the exercise, the planned sets and reps, and for each attempt whether it counted, how deep it went (an angle in degrees), how long it took and its form note; plus, for earlier sessions of the same exercise on this TV, how many days ago, the reps, the clean reps and the time. Also the session's pairing code and channel, so our server can check the request comes from a workout in progress.</li>
         <li><strong>What is never sent:</strong> video, pictures, body points, names or profile details.</li>
-        <li><strong>Where it goes:</strong> our server (AWS, Mumbai) passes the numbers to Claude, an AI model made by Anthropic, running on Amazon Bedrock in the AWS US East (N. Virginia) region, which writes the report. Amazon Bedrock processes the request under AWS's terms; AWS states that Bedrock does not use your prompts or results to train models.</li>
+        <li><strong>Where it goes:</strong> our server (AWS, Mumbai) passes the numbers to Amazon Nova, an AI model made by Amazon, on Amazon Bedrock, which writes the report. Bedrock may run the request in another AWS region when Mumbai is busy (cross-region inference). Amazon Bedrock processes the request under AWS's terms; AWS states that Bedrock does not use your prompts or results to train models.</li>
         <li><strong>What is kept:</strong> we don't store the numbers or the report. The report is shown on your TV and forgotten when you close the app. Our server keeps an error log for seven days, and counts how many reports each pairing session has asked for (at most ten), deleted with the session after two hours.</li>
         <li>The report is written by AI from numbers only. It can be wrong and is not medical advice.</li>
       </ul>
