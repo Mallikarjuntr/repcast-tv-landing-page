@@ -50,8 +50,9 @@ h3 { font-size: 27px; line-height: 1.05; }
 
 /* Top bar */
 .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; }
-.wordmark { font-family: var(--display); font-weight: 800; font-size: 32px; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
-.wordmark span { color: var(--accent); }
+.wordmark { font-family: var(--display); font-weight: 800; font-size: 32px; letter-spacing: -0.5px; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; }
+.wordmark .word span { color: var(--accent); }
+.wordmark img { width: 38px; height: 38px; border-radius: 9px; }
 .nav { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 26px; font-weight: 600; font-size: 16px; }
 .nav a { color: var(--soft); text-decoration: none; }
 .nav a:hover { color: var(--text); }
@@ -169,6 +170,7 @@ pre.code .k { color: #ff9a68; } pre.code .s { color: #9fd5c2; } pre.code .c { co
 /* Closing call */
 .cta { text-align: center; padding: 110px 0; background: radial-gradient(50% 70% at 50% 100%, rgba(255, 122, 61, 0.18), transparent 70%); }
 .cta h2 { font-size: clamp(44px, 7vw, 86px); }
+.cta-mark { margin: 0 auto 26px; border-radius: 24px; box-shadow: 0 24px 60px rgba(255, 122, 61, 0.25); }
 .cta .actions { justify-content: center; }
 
 /* Footer */

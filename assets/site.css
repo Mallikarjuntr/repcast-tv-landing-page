@@ -37,8 +37,9 @@ a:hover { color: #ff9a68; }
 /* Header */
 /* Vertical padding only, so .wrap keeps its side gutters. */
 .top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 24px; padding-bottom: 24px; }
-.wordmark { font-weight: 800; font-size: 28px; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
-.wordmark span { color: var(--accent); }
+.wordmark { font-weight: 800; font-size: 28px; letter-spacing: -0.5px; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 12px; }
+.wordmark .word span { color: var(--accent); }
+.wordmark img { width: 38px; height: 38px; border-radius: 9px; }
 .nav { display: flex; flex-wrap: wrap; gap: 4px 20px; font-weight: 600; font-size: 16px; }
 .nav a { color: var(--soft); text-decoration: none; }
 .nav a:hover, .nav a[aria-current='page'] { color: var(--text); }
