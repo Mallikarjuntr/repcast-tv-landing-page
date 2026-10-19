@@ -3,158 +3,271 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spotter — a workout coach for Amazon Fire TV that checks every rep</title>
-  <meta name="description" content="Spotter is a workout app for Amazon Fire TV. Your phone is the camera: the TV counts every rep, tells you how to fix your form, and never counts a rep that doesn't count.">
+  <title>Spotter — your phone is the camera, your Fire TV is the coach</title>
+  <meta name="description" content="Spotter is a workout coach for Amazon Fire TV. Prop up the phone you already own: it watches your form, and the TV counts every rep, says what to fix, and never counts a rep that doesn't count.">
   <meta property="og:title" content="Spotter — your living-room spotter">
-  <meta property="og:description" content="A Fire TV fitness coach that checks your form through the phone you already own.">
+  <meta property="og:description" content="A Fire TV fitness coach that checks every rep through the phone you already own. Video never leaves your home.">
   <meta property="og:image" content="https://spotter-tv.netlify.app/assets/img/og.png">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#15120F">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/home.css">
 </head>
 <body>
   <header class="wrap top">
     <a class="wordmark" href="/">spotter<span>.</span></a>
     <nav class="nav" aria-label="Main">
+      <a href="#honest">How it judges</a>
       <a href="#how">How it works</a>
-      <a href="#setup">Set up your phone</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#open-source">Open source</a>
+      <a class="btn btn-ghost" href="https://github.com/Mallikarjuntr/spotter-tv-app">GitHub</a>
     </nav>
   </header>
 
   <main>
-    <div class="wrap hero">
-      <div>
-        <p class="kicker">A workout app for Amazon Fire TV</p>
-        <h1>Work out at home. Your TV checks every rep.</h1>
-        <p class="lead">Spotter is a fitness coach on your Fire TV. Prop up your phone and its camera watches you: the TV counts each squat, lunge and jumping jack, tells you how to fix your form, and never counts a rep that doesn't count.</p>
-        <ul class="needs" aria-label="What you need">
-          <li><strong>A Fire TV</strong> stick or TV</li>
-          <li><strong>Your phone</strong> as the camera — nothing to install</li>
-          <li><strong>About 2 metres</strong> of floor</li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn-primary" href="#how">See how it works</a>
-          <a class="btn btn-secondary" href="https://github.com/Mallikarjuntr/spotter-tv-app">The code on GitHub</a>
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <p class="kicker">A workout coach for Amazon Fire TV</p>
+          <h1>Your phone is the camera. Your TV is the <em>coach.</em></h1>
+          <p class="lead">Prop up the phone you already own. It watches your form; the TV counts every rep, tells you what to fix in a coach's voice, and never counts a rep that doesn't count.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#how">See how it works</a>
+            <a class="btn btn-ghost" href="https://github.com/Mallikarjuntr/spotter-tv-app">Read the code</a>
+          </div>
+          <ul class="needs" aria-label="What you need">
+            <li><strong>Any Fire TV</strong> — even the 1 GB stick</li>
+            <li><strong>Your phone</strong> — nothing to install</li>
+            <li><strong>2 metres</strong> of floor</li>
+          </ul>
         </div>
-        <p class="privacy-pill">
-          <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 11 V7 a4 4 0 0 1 8 0 V11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-          Video goes only from your phone to your TV — never to the cloud
-        </p>
-      </div>
-      <div class="shot">
-        <img src="assets/img/tv-home.webp" width="1280" height="720" alt="Spotter's home screen on a Fire TV: Let's move, a Start button, the 3D trainer doing squats and the week so far.">
+        <div class="devices">
+          <div class="tv">
+            <img src="assets/img/tv-live-video.webp" width="1280" height="720" alt="Spotter on a Fire TV: the phone's live video with an orange skeleton drawn on the person mid-squat, the rep count 05 of 12, and the coach saying “That's it — smooth.”">
+          </div>
+          <div class="phone">
+            <img src="assets/img/phone-live.webp" width="585" height="1266" alt="The phone camera page: the same squat with the skeleton, 4 reps, and “Good rep”.">
+          </div>
+          <span class="link-tag">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9C8 4 16 4 21.5 9M5.5 12.5C9.5 9 14.5 9 18.5 12.5M8.5 16c2-1.7 5-1.7 7 0" fill="none" stroke="#FF7A3D" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="19.5" r="1.6" fill="#FF7A3D"/></svg>
+            Phone → TV over your Wi-Fi. Never the cloud.
+          </span>
+        </div>
       </div>
     </div>
 
+    <div class="ticker" aria-label="Things Spotter's coach says">
+      <div class="ticker-track">
+        <span class="verdict v-clean"><b>Clean</b> Good depth.</span>
+        <span class="verdict v-no"><b>No rep</b> Not low enough — that one doesn't count</span>
+        <span class="verdict v-note"><b>Note</b> Push your knees out</span>
+        <span class="verdict v-no"><b>No rep</b> That's a lunge — this set is squats</span>
+        <span class="verdict v-guide"><b>Coach</b> Step back a little, so I can see all of you.</span>
+        <span class="verdict v-no"><b>No rep</b> Feet wider — this set is sumo squats</span>
+        <span class="verdict v-clean"><b>Clean</b> That's it — smooth.</span>
+        <span class="verdict v-no"><b>No rep</b> That was a full squat — this set is half squats</span>
+        <span class="verdict v-note"><b>Note</b> Chest up the whole way down</span>
+        <span class="verdict v-guide"><b>Coach</b> Rest. Next: squats, set 2.</span>
+        <span class="verdict v-clean" aria-hidden="true"><b>Clean</b> Good depth.</span>
+        <span class="verdict v-no" aria-hidden="true"><b>No rep</b> Not low enough — that one doesn't count</span>
+        <span class="verdict v-note" aria-hidden="true"><b>Note</b> Push your knees out</span>
+        <span class="verdict v-no" aria-hidden="true"><b>No rep</b> That's a lunge — this set is squats</span>
+        <span class="verdict v-guide" aria-hidden="true"><b>Coach</b> Step back a little, so I can see all of you.</span>
+        <span class="verdict v-no" aria-hidden="true"><b>No rep</b> Feet wider — this set is sumo squats</span>
+        <span class="verdict v-clean" aria-hidden="true"><b>Clean</b> That's it — smooth.</span>
+        <span class="verdict v-no" aria-hidden="true"><b>No rep</b> That was a full squat — this set is half squats</span>
+        <span class="verdict v-note" aria-hidden="true"><b>Note</b> Chest up the whole way down</span>
+        <span class="verdict v-guide" aria-hidden="true"><b>Coach</b> Rest. Next: squats, set 2.</span>
+      </div>
+    </div>
+
+    <section id="honest">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">An honest spotter</p>
+          <h2>Every rep judged. None of them given away.</h2>
+          <p class="lead">A rep only counts when it's real. When it doesn't, Spotter says why — and it knows a lunge from a squat, a reverse lunge from a forward one, and a step jack from a jumping jack.</p>
+        </div>
+        <div class="verdicts">
+          <div class="vcard clean">
+            <span class="chip">Clean</span>
+            <q>Good depth.</q>
+            <p>Deep enough, knees out, chest up. Counted, and coloured orange on your receipt.</p>
+            <div class="reps" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="vcard note">
+            <span class="chip">Counted, with a note</span>
+            <q>Push your knees out.</q>
+            <p>The rep counts, and the coach tells you the one thing to fix on the next one.</p>
+            <div class="reps" aria-hidden="true"><i></i><i class="n"></i><i></i><i></i><i class="n"></i></div>
+          </div>
+          <div class="vcard no">
+            <span class="chip">No rep</span>
+            <q>That's a lunge — this set is squats.</q>
+            <p>Not low enough, the wrong move, or you wandered off your spot: it doesn't count, and you hear why.</p>
+            <div class="reps" aria-hidden="true"><i></i><i class="x"></i><i></i><i class="x"></i><i></i></div>
+          </div>
+        </div>
+        <div class="proof">
+          <div><strong>12</strong><span>moves the camera checks, each with an easier version</span></div>
+          <div><strong>3</strong><span>camera angles it judges from: front, 45° and the side</span></div>
+          <div><strong>72</strong><span>tests in the open-source rep engine</span></div>
+          <div><strong>1 GB</strong><span>Fire TV Stick it was built and measured on</span></div>
+          <div><strong>117</strong><span>coach lines, recorded with Amazon Polly</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2>Pick a move. Scan. Train.</h2>
+          <p class="lead">No account, no app on your phone, no camera to buy. The TV leads; the phone just watches.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="shot"><img src="assets/img/tv-pair-2.webp" width="1280" height="720" loading="lazy" alt="The TV's pairing screen: a QR code, a 4-digit code and a plan of where to put the phone."></div>
+            <h3>Pick a move on the TV</h3>
+            <p>Squats, lunges, jumping jacks, push-ups or glute bridges. The TV shows a QR code and a 4-digit code.</p>
+          </div>
+          <div class="step">
+            <div class="shot phone-shot"><img src="assets/img/phone-live.webp" width="585" height="1266" loading="lazy" alt="The phone page tracking a squat."></div>
+            <h3>Scan it with your phone</h3>
+            <p>The camera page opens in the browser. Prop the phone at hip height, about 2.5 m away, turned 45° to you.</p>
+          </div>
+          <div class="step">
+            <div class="shot"><img src="assets/img/tv-live-video.webp" width="1280" height="720" loading="lazy" alt="The live set on the TV with the person's video and skeleton."></div>
+            <h3>Train — it starts itself</h3>
+            <p>When the phone can see you, a 5-second countdown starts the set. Reps, rests and the coach's voice come from the TV.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="wrap">
-        <p class="kicker">Two ways to train</p>
-        <h2>Follow along, or be coached</h2>
-        <div class="grid grid-2">
-          <div class="card">
-            <span class="tag">No camera needed</span>
-            <h3 style="margin-top:10px">Follow along</h3>
-            <p>A 3D trainer shows every move on the TV and a voice guides you through it, on a steady beat.</p>
-            <ul>
-              <li>Pick any move: squats, lunges, push-ups, bridges, planks and more</li>
-              <li>A gentler version of most moves, marked "easier"</li>
-              <li>Streaks and progress for everyone in the house</li>
+        <div class="feature">
+          <div class="frame"><img src="assets/img/tv-analysis.webp" width="1280" height="720" loading="lazy" alt="Workout analysis on the TV: 12 of 36 counted, 100% clean, deepest knee angle 50°, a bar for every attempt, form breakdown, a trend against earlier sessions and an AI coach's note."></div>
+          <div>
+            <p class="kicker">After every move</p>
+            <h2>See exactly how it went.</h2>
+            <ul class="points">
+              <li><span><strong>A bar for every attempt</strong>, by set: how deep, and whether it counted.</span></li>
+              <li><span><strong>What the camera spotted most</strong>, and how today compares with last time.</span></li>
+              <li><span><strong>A coach's note from Amazon Nova</strong> on Amazon Bedrock, written from your numbers only.</span></li>
             </ul>
           </div>
-          <div class="card highlight">
-            <span class="tag">With your phone's camera</span>
-            <h3 style="margin-top:10px">Coach me on camera</h3>
-            <p>Pick one of twelve moves the camera checks. Your phone watches your form and the TV shows you, live, with your skeleton drawn on top. It starts by itself as soon as your phone can see you.</p>
-            <ul>
-              <li>Every rep judged: clean, counted with a note, or not counted — and why</li>
-              <li>The TV speaks the count and the fix: "push your knees out" — your phone just watches</li>
-              <li>A receipt at the end with every attempt, set by set</li>
+        </div>
+        <div class="feature flip">
+          <div class="frame"><img src="assets/img/tv-progress.webp" width="1280" height="720" loading="lazy" alt="Progress on the TV: a year of training as a calendar of squares, streaks, clean-form trend and the moves trained most."></div>
+          <div>
+            <p class="kicker">For everyone in the house</p>
+            <h2>A year at a glance.</h2>
+            <ul class="points">
+              <li><span><strong>One square per day</strong>, darker the more reps you did.</span></li>
+              <li><span><strong>Streaks, clean form over time</strong> and the moves you train most.</span></li>
+              <li><span><strong>A profile per person</strong>, kept on the TV. No sign-in.</span></li>
             </ul>
           </div>
         </div>
-        <div class="figure-row">
-          <figure class="shot"><img src="assets/img/tv-live.webp" width="1280" height="720" loading="lazy" alt="The live coaching screen: a big rep count, a coach's line, and the person's outline."></figure>
-          <figure class="shot"><img src="assets/img/tv-receipt.webp" width="1280" height="720" loading="lazy" alt="The receipt after a coached session: total reps, clean form, and every attempt by set."></figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="how">
-      <div class="wrap">
-        <p class="kicker">How it works</p>
-        <h2>Three steps, nothing to install on your phone</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="step-num">1</div>
-            <h3 style="margin-top:12px">Start on the TV</h3>
-            <p>Open Spotter on your Fire TV, press Start, choose Coach me on camera and pick a move.</p>
-          </div>
-          <div class="card">
-            <div class="step-num">2</div>
-            <h3 style="margin-top:12px">Scan the code</h3>
-            <p>Scan the QR code with your phone, or open <a href="/go">spotter-tv.netlify.app/go</a> and type the code shown on the TV. The camera page opens in your phone's browser.</p>
-          </div>
-          <div class="card">
-            <div class="step-num">3</div>
-            <h3 style="margin-top:12px">Set it down and train</h3>
-            <p>Prop the phone up and step back until the TV can see you. It counts down from 5 and starts. When you're done, pick another move; the phone stays linked.</p>
+        <div class="feature">
+          <div class="frame"><img src="assets/img/tv-fallback.webp" width="1280" height="720" loading="lazy" alt="When the live picture can't reach the TV: the 3D trainer shows the move, a notice explains the phone and TV need the same Wi-Fi, and the person's outline is shown in a corner."></div>
+          <div>
+            <p class="kicker">Built for real living rooms</p>
+            <h2>Even when the picture can't get through.</h2>
+            <ul class="points">
+              <li><span><strong>On guest or office Wi-Fi</strong> the video can't cross — the 3D trainer shows the move instead, and your outline still follows you.</span></li>
+              <li><span><strong>Reps still count</strong>, and the coach still talks.</span></li>
+              <li><span><strong>No camera on the TV?</strong> Follow along with the trainer instead, on a steady beat.</span></li>
+            </ul>
           </div>
         </div>
-        <div class="figure-row">
-          <figure class="shot"><img src="assets/img/tv-pair.webp" width="1280" height="720" loading="lazy" alt="The pairing screen: a QR code, the code to type, a reminder to keep the phone and TV on the same Wi-Fi, and where to put the phone."></figure>
-          <figure class="shot"><img src="assets/img/tv-pick.webp" width="1280" height="720" loading="lazy" alt="Pick a move with the camera: squats, lunges, jumping jacks, push-ups and glute bridges in sections, easier versions marked, with the 3D trainer showing the one in focus."></figure>
+      </div>
+    </section>
+
+    <section id="privacy" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Private by design</p>
+          <h2>Your picture never leaves your home.</h2>
+          <p class="lead">Body tracking runs on your phone. The video goes straight to your TV. Only numbers ever reach the internet. <a href="privacy.html">Read the privacy policy</a>.</p>
+        </div>
+        <div class="flow">
+          <div class="node">
+            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5" fill="none" stroke="#FF7A3D" stroke-width="2"/><circle cx="12" cy="18" r="1.2" fill="#FF7A3D"/></svg></span>
+            <h3>Your phone</h3>
+            <p>Finds your body in each frame and judges every rep, right in the browser.</p>
+          </div>
+          <div class="arrow">
+            <svg width="60" height="20" viewBox="0 0 60 20" aria-hidden="true"><path d="M2 10H54M46 3l8 7-8 7" fill="none" stroke="#FF7A3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>live video,<br>home Wi-Fi only</span>
+          </div>
+          <div class="node">
+            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2" fill="none" stroke="#FF7A3D" stroke-width="2"/><path d="M8 20.5h8" stroke="#FF7A3D" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3>Your Fire TV</h3>
+            <p>Shows you, keeps the count, speaks, and keeps everyone's history — on the TV.</p>
+          </div>
+          <div class="arrow">
+            <svg width="60" height="20" viewBox="0 0 60 20" aria-hidden="true"><path d="M2 10H54M46 3l8 7-8 7" fill="none" stroke="#8F867B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 5"/></svg>
+            <span>rep numbers only<br><span class="no">no video, ever</span></span>
+          </div>
+          <div class="node cloud">
+            <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-8 5.5 5.5 0 0 0-10.6-1.5A4.5 4.5 0 0 0 7 18z" fill="none" stroke="#B5ACA0" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3>AWS</h3>
+            <p>Links phone and TV with a code that expires in 2 hours, and writes the AI note if you ask for one.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="setup">
-      <div class="wrap">
-        <p class="kicker">Set up your phone</p>
-        <h2>Where to put the phone</h2>
-        <ul class="tips">
-          <li>Put the phone on the floor or a low shelf, propped up at about hip height.</li>
-          <li>Stand about 2.5 metres (8 feet) away, so your whole body, head to feet, is in view.</li>
-          <li>Turn the phone about 45° to you. Straight from the side, one leg hides the other.</li>
-          <li>Keep the phone and the TV on the same Wi-Fi. That's how your picture reaches the TV. On other networks reps are still counted, and the TV shows an outline instead.</li>
-          <li>Train in good light, in clothes that show the shape of your knees and hips.</li>
-          <li>Use an up-to-date browser (Chrome on Android, Safari on iPhone) and allow the camera when asked.</li>
-        </ul>
+    <section id="open-source">
+      <div class="wrap oss">
+        <div>
+          <p class="kicker">Open source</p>
+          <h2>The rep engine is yours to use.</h2>
+          <p class="lead"><a href="https://github.com/Mallikarjuntr/spotter-movement">spotter-movement</a> turns pose points into reps, holds and honest form feedback. MIT licensed, 72 tests, exercises defined as plain data — add your own without new code.</p>
+          <div class="stack">
+            <span>Amazon Fire TV</span>
+            <span>React Native for TV</span>
+            <span>MediaPipe Pose</span>
+            <span>WebRTC</span>
+            <span class="aws">AWS AppSync Events</span>
+            <span class="aws">AWS Lambda</span>
+            <span class="aws">Amazon DynamoDB</span>
+            <span class="aws">Amazon Polly</span>
+            <span class="aws">Amazon Bedrock · Nova</span>
+          </div>
+        </div>
+        <pre class="code" aria-label="Using spotter-movement"><code><span class="k">import</span> { RepDetector, squat } <span class="k">from</span> <span class="s">'spotter-movement'</span>;
+
+<span class="k">const</span> detector = <span class="k">new</span> RepDetector(squat);
+
+<span class="c">// Every video frame, from MediaPipe:</span>
+<span class="k">const</span> update = detector.update({
+  t: performance.now(),
+  landmarks: result.landmarks[0],
+});
+
+<span class="k">if</span> (update.rep) {
+  update.rep.verdict; <span class="c">// 'no-rep'</span>
+  update.rep.cues;    <span class="c">// ["Not deep enough"]</span>
+}</code></pre>
       </div>
     </section>
 
-    <section>
+    <div class="cta">
       <div class="wrap">
-        <p class="kicker">Private by design</p>
-        <h2>Your picture stays at home</h2>
-        <div class="grid grid-3">
-          <div class="card"><h3>On your phone</h3><p>Body tracking runs in your phone's browser. Your phone sends the TV your rep counts and the positions of a few body points.</p></div>
-          <div class="card"><h3>Phone to TV</h3><p>The live picture goes straight from your phone to your TV over your home Wi-Fi. It is never sent to or stored on our servers.</p></div>
-          <div class="card"><h3>On your TV</h3><p>Profiles and history are kept on the TV. No account, no sign-in. <a href="privacy.html">Read the privacy policy</a>.</p></div>
+        <p class="kicker">Built for Build, Ship, Shape — the Amazon Developer Hackathon 2026</p>
+        <h2>Your living-room spotter<span class="dot">.</span></h2>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/Mallikarjuntr/spotter-tv-app">Get Spotter on GitHub</a>
+          <a class="btn btn-ghost" href="/go">Open the phone camera page</a>
         </div>
       </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <p class="kicker">Built with</p>
-        <h2>Fire TV, AWS and open source</h2>
-        <p class="lead">Built for the Amazon Developer Hackathon 2026. The rep counting and form checks are an open-source library, <a href="https://github.com/Mallikarjuntr/spotter-movement">spotter-movement</a>.</p>
-        <div class="stack">
-          <span class="chip">Amazon Fire TV</span>
-          <span class="chip">React Native for TV</span>
-          <span class="chip">AWS AppSync Events</span>
-          <span class="chip">AWS Lambda</span>
-          <span class="chip">Amazon DynamoDB</span>
-          <span class="chip">Amazon Polly</span>
-          <span class="chip">MediaPipe Pose</span>
-          <span class="chip">WebRTC</span>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer class="foot">
