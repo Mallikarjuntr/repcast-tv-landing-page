@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spotter — your phone is the camera, your Fire TV is the coach</title>
-  <meta name="description" content="Spotter is a workout coach for Amazon Fire TV. Prop up the phone you already own: it watches your form, and the TV counts every rep, says what to fix, and never counts a rep that doesn't count.">
-  <meta property="og:title" content="Spotter — your living-room spotter">
+  <title>RepCast — the coach on your Fire TV that sees every rep</title>
+  <meta name="description" content="RepCast is a workout coach for Amazon Fire TV. Prop up the phone you already own: it watches your form, and the TV counts every rep, says what to fix, and never counts a rep that doesn't count.">
+  <meta property="og:title" content="RepCast — the coach on your TV that sees every rep">
   <meta property="og:description" content="A Fire TV fitness coach that checks every rep through the phone you already own. Video never leaves your home.">
-  <meta property="og:image" content="https://spotter-tv.netlify.app/assets/img/og.png">
+  <meta property="og:image" content="https://repcast.netlify.app/assets/img/og.png">
   <meta property="og:type" content="website">
   <meta name="theme-color" content="#15120F">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -16,13 +16,13 @@
 </head>
 <body>
   <header class="wrap top">
-    <a class="wordmark" href="/"><img src="assets/img/mark.svg" width="38" height="38" alt=""><span class="word">spotter<span>.</span></span></a>
+    <a class="wordmark" href="/"><img src="assets/img/mark.svg" width="38" height="38" alt=""><span class="word">repcast<span>.</span></span></a>
     <nav class="nav" aria-label="Main">
       <a href="#honest">How it judges</a>
       <a href="#how">How it works</a>
       <a href="#privacy">Privacy</a>
       <a href="#open-source">Open source</a>
-      <a class="btn btn-ghost" href="https://github.com/Mallikarjuntr/spotter-tv-app">GitHub</a>
+      <a class="btn btn-ghost" href="https://github.com/Mallikarjuntr/repcast-tv-app"><img src="assets/img/logos/github.svg" width="18" height="18" alt="">GitHub</a>
     </nav>
   </header>
 
@@ -31,11 +31,11 @@
       <div class="wrap">
         <div>
           <p class="kicker">A workout coach for Amazon Fire TV</p>
-          <h1>Your phone is the camera. Your TV is the <em>coach.</em></h1>
+          <h1>The coach on your TV that sees <em>every rep.</em></h1>
           <p class="lead">Prop up the phone you already own. It watches your form; the TV counts every rep, tells you what to fix in a coach's voice, and never counts a rep that doesn't count.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#how">See how it works</a>
-            <a class="btn btn-ghost" href="https://github.com/Mallikarjuntr/spotter-tv-app">Read the code</a>
+            <a class="btn btn-ghost" href="https://github.com/Mallikarjuntr/repcast-tv-app"><img src="assets/img/logos/github.svg" width="18" height="18" alt="">Read the code</a>
           </div>
           <ul class="needs" aria-label="What you need">
             <li><strong>Any Fire TV</strong> — even the 1 GB stick</li>
@@ -45,7 +45,7 @@
         </div>
         <div class="devices">
           <div class="tv">
-            <img src="assets/img/tv-live-video.webp" width="1280" height="720" alt="Spotter on a Fire TV: live video of a lifter at the bottom of a squat in a gym, an orange skeleton drawn on him, the rep count 03 of 12, and the coach saying “Good depth.”">
+            <img src="assets/img/tv-live-video.webp" width="1280" height="720" alt="RepCast on a Fire TV: live video of a lifter at the bottom of a squat in a gym, an orange skeleton drawn on him, the rep count 03 of 12, and the coach saying “Good depth.”">
           </div>
           <div class="phone">
             <img src="assets/img/phone-live.webp" width="585" height="1266" alt="The phone camera page: the same lifter at the bottom of a squat with the skeleton, 11 of 12, knee at 73°, and “Good rep”.">
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="ticker" aria-label="Things Spotter's coach says">
+    <div class="ticker" aria-label="Things RepCast's coach says">
       <div class="ticker-track">
         <span class="verdict v-clean"><b>Clean</b> Good depth.</span>
         <span class="verdict v-no"><b>No rep</b> Not low enough — that one doesn't count</span>
@@ -86,9 +86,9 @@
     <section id="honest">
       <div class="wrap">
         <div class="section-head">
-          <p class="kicker">An honest spotter</p>
+          <p class="kicker">An honest coach</p>
           <h2>Every rep judged. None of them given away.</h2>
-          <p class="lead">A rep only counts when it's real. When it doesn't, Spotter says why — and it knows a lunge from a squat, a reverse lunge from a forward one, and a step jack from a jumping jack.</p>
+          <p class="lead">A rep only counts when it's real. When it doesn't, RepCast says why — and it knows a lunge from a squat, a reverse lunge from a forward one, and a step jack from a jumping jack.</p>
         </div>
         <div class="verdicts">
           <div class="vcard clean">
@@ -240,12 +240,17 @@
         <div>
           <p class="kicker">Open source</p>
           <h2>The rep engine is yours to use.</h2>
-          <p class="lead"><a href="https://github.com/Mallikarjuntr/spotter-movement">spotter-movement</a> turns pose points into reps, holds and honest form feedback. MIT licensed, 72 tests, exercises defined as plain data — add your own without new code.</p>
+          <p class="lead"><a href="https://github.com/Mallikarjuntr/repcast-movement"><img class="inline-logo" src="assets/img/logos/github.svg" width="18" height="18" alt="">repcast-movement</a> turns pose points into reps, holds and honest form feedback. MIT licensed, 72 tests, exercises defined as plain data — add your own without new code.</p>
           <div class="stack">
             <span>Amazon Fire TV</span>
-            <span>React Native for TV</span>
-            <span>MediaPipe Pose</span>
-            <span>WebRTC</span>
+            <span><img src="assets/img/logos/react.svg" width="18" height="18" alt="">React Native for TV</span>
+            <span><img src="assets/img/logos/expo.svg" width="18" height="18" alt="">Expo</span>
+            <span><img src="assets/img/logos/typescript.svg" width="18" height="18" alt="">TypeScript</span>
+            <span><img src="assets/img/logos/mediapipe.svg" width="18" height="18" alt="">MediaPipe Pose</span>
+            <span><img src="assets/img/logos/webrtc.svg" width="18" height="18" alt="">WebRTC</span>
+            <span><img src="assets/img/logos/vite.svg" width="18" height="18" alt="">Vite</span>
+            <span><img src="assets/img/logos/vitest.svg" width="18" height="18" alt="">Vitest</span>
+            <span><img src="assets/img/logos/githubactions.svg" width="18" height="18" alt="">GitHub Actions</span>
             <span class="aws">AWS AppSync Events</span>
             <span class="aws">AWS Lambda</span>
             <span class="aws">Amazon DynamoDB</span>
@@ -253,7 +258,7 @@
             <span class="aws">Amazon Bedrock · Nova</span>
           </div>
         </div>
-        <pre class="code" aria-label="Using spotter-movement"><code><span class="k">import</span> { RepDetector, squat } <span class="k">from</span> <span class="s">'spotter-movement'</span>;
+        <pre class="code" aria-label="Using repcast-movement"><code><span class="k">import</span> { RepDetector, squat } <span class="k">from</span> <span class="s">'repcast-movement'</span>;
 
 <span class="k">const</span> detector = <span class="k">new</span> RepDetector(squat);
 
@@ -274,9 +279,9 @@
       <div class="wrap">
         <img class="cta-mark" src="assets/img/mark.svg" width="104" height="104" alt="">
         <p class="kicker">Built for Build, Ship, Shape — the Amazon Developer Hackathon 2026</p>
-        <h2>Your living-room spotter<span class="dot">.</span></h2>
+        <h2>Every rep, seen<span class="dot">.</span></h2>
         <div class="actions">
-          <a class="btn btn-primary" href="https://github.com/Mallikarjuntr/spotter-tv-app">Get Spotter on GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/Mallikarjuntr/repcast-tv-app"><img src="assets/img/logos/github-dark.svg" width="20" height="20" alt="">Get RepCast on GitHub</a>
           <a class="btn btn-ghost" href="/go">Open the phone camera page</a>
         </div>
       </div>
@@ -285,11 +290,11 @@
 
   <footer class="foot">
     <div class="wrap">
-      <span>© 2026 Spotter · Exercise safely; Spotter is not medical advice.</span>
+      <span>© 2026 RepCast · Exercise safely; RepCast is not medical advice.</span>
       <nav aria-label="Footer">
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
-        <a href="https://github.com/Mallikarjuntr/spotter-tv-app">GitHub</a>
+        <a href="https://github.com/Mallikarjuntr/repcast-tv-app">GitHub</a>
       </nav>
     </div>
   </footer>

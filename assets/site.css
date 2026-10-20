@@ -1,4 +1,4 @@
-/* Spotter "Studio" look, matching the Fire TV app (apps/tv/src/theme.ts in spotter-tv-app): Barlow type. */
+/* RepCast "Studio" look, matching the Fire TV app (apps/tv/src/theme.ts in repcast-tv-app): Barlow type. */
 @font-face { font-family: 'Barlow'; src: url('fonts/Barlow_400Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'Barlow'; src: url('fonts/Barlow_600SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
 @font-face { font-family: 'Barlow'; src: url('fonts/Barlow_800ExtraBold.ttf') format('truetype'); font-weight: 800; font-display: swap; }
