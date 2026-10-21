@@ -84,19 +84,20 @@
   to = "/terms.html"
   status = 200
 
-# The phone camera page is built and published by repcast-tv-app (GitHub Pages). Phones are sent
-# there (302) rather than served it from this address, so the page's origin stays
-# mallikarjuntr.github.io, which the backend's CORS list already allows. 302, not 301, so phones
-# don't cache it if the camera page moves. Netlify keeps the query string (?code=1234).
+# The phone camera page is built and published by repcast-tv-app on GitHub Pages and served here
+# at /camera/ (a proxy, status 200), so phones stay on repcast.netlify.app — the backend's CORS list
+# allows this origin. Its build uses relative paths, so it works under /camera/ unchanged. If
+# Netlify is ever down, the same page is at https://mallikarjuntr.github.io/repcast-tv-app/.
 [[redirects]]
   from = "/camera/*"
   to = "https://mallikarjuntr.github.io/repcast-tv-app/:splat"
-  status = 302
+  status = 200
   force = true
 
-# Short link the TV's QR code opens: /go?code=1234 → the camera page.
+# Short link the TV's QR code opens: /go?code=1234 → /camera/?code=1234 (Netlify keeps the query
+# string). 302, not 301, so phones don't cache it.
 [[redirects]]
   from = "/go"
-  to = "https://mallikarjuntr.github.io/repcast-tv-app/"
+  to = "/camera/"
   status = 302
   force = true

@@ -125,6 +125,8 @@ section.alt { background: var(--bg-2); }
 .gym-grid video { display: block; width: 100%; height: auto; aspect-ratio: 1; border-radius: 16px; background: var(--surface); object-fit: cover; }
 .gym-grid figcaption { margin-top: 10px; color: var(--muted); font-size: 15px; line-height: 1.35; }
 .gym-grid figcaption strong { display: block; color: var(--text); font-size: 17px; }
+/* The trainer clips are rendered on the panel colour, 5:4; show them whole. */
+.trainers .gym-grid video { aspect-ratio: 5 / 4; object-fit: contain; }
 .proof { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border-radius: 20px; overflow: hidden; margin-top: 56px; }
 @media (min-width: 860px) { .proof { grid-template-columns: repeat(5, 1fr); } }
 .proof div { background: var(--bg); padding: 26px 22px; }
