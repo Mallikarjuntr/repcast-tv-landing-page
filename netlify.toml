@@ -101,3 +101,10 @@
   to = "/camera/"
   status = 302
   force = true
+
+# Short link to type on a Fire TV (Downloader app): /apk → the TV app's APK on the GitHub release.
+[[redirects]]
+  from = "/apk"
+  to = "https://github.com/Mallikarjuntr/repcast-tv-app/releases/download/v1.0.0/RepCast-1.0.0.apk"
+  status = 302
+  force = true
